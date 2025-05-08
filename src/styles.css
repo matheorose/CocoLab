@@ -2,13 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply font-orbitron;
-  }
-}
-
-@font-face {
-  font-family: 'Orbitron';
-  src: local('Orbitron');
-}
