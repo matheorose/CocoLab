@@ -1,0 +1,23 @@
+.services-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  background-image: url('../../../assets/fond.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.services-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.services-section > * {
+  position: relative;
+  z-index: 1;
+}
