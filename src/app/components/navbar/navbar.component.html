@@ -38,7 +38,7 @@
     [ngClass]="{ '-translate-x-full': !menuOpen, 'translate-x-0': menuOpen }">
     <ul class="text-[#7F00FF] text-5xl space-y-6 flex flex-col gap-10 items-center mt-[20vh]">
       <li><a href="/" (click)="closeMenu()" class="transition-all duration-300 hover:scale-125 hover:text-[#7F00FF] block">Accueil</a></li>
-      <li><a href="#about" (click)="closeMenu()" class="transition-all duration-300 hover:scale-125 hover:text-[#7F00FF] block">À propos</a></li>
+      <li><a routerLink="/about" (click)="closeMenu()" class="transition-all duration-300 hover:scale-125 hover:text-[#7F00FF] block">À propos</a></li>
       <li><a routerLink="/services" (click)="closeMenu()" class="transition-all duration-300 hover:scale-125 hover:text-[#7F00FF] block">Nos Services</a></li>
       <li><a routerLink="/contact" (click)="closeMenu()" class="transition-all duration-300 hover:scale-125 hover:text-[#7F00FF] block">Contact</a></li>
     </ul>
