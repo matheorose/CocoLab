@@ -24,6 +24,12 @@
   z-index: 1;
 }
 
+@media (max-width: 768px) {
+  .services-section {
+    background-position: right center;
+  }
+}
+
 /* Vous pouvez supprimer la règle suivante si elle existait et qui pourrait causer des conflits:
 .services-section > div {
   min-height: 100%;
