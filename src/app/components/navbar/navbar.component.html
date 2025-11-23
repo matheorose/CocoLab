@@ -1,26 +1,30 @@
 <nav class="text-gray-500 px-6 py-4 flex items-center fixed top-0 w-full z-50">
   
-  <button (click)="toggleMenu()" class="z-[60] nav-button-transition" [class.nav-button-hidden]="hideNavButtons">
+  <button (click)="toggleMenu()" class="z-[60] nav-button-transition" [class.nav-button-hidden]="hideNavButtons"
+    [ngClass]="{ 'text-white': isServicesRoute, 'text-gray-500': !isServicesRoute }">
     <svg *ngIf="!menuOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
       viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round"
         d="M4 6h16M4 12h16M4 18h16" />
     </svg>
-    <svg *ngIf="menuOpen" class="w-6 h-6 text-[#7F00FF]" fill="none" stroke="currentColor" stroke-width="2"
+    <svg *ngIf="menuOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
       viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round"
         d="M6 18L18 6M6 6l12 12" />
     </svg>
   </button>
 
-  <div routerLink="/" class="absolute left-1/2 transform -translate-x-1/2 text-center font-bold z-30 flex items-center gap-2 nav-button-transition" [class.nav-button-hidden]="hideNavButtons">
+  <div routerLink="/" class="absolute left-1/2 transform -translate-x-1/2 text-center font-bold z-30 flex items-center gap-2 nav-button-transition"
+    [class.nav-button-hidden]="hideNavButtons"
+    [ngClass]="{ 'text-white': isServicesRoute, 'text-gray-500': !isServicesRoute }">
     <img src="assets/logoCocoLab.png" class="h-12 w-auto"/>
     CocoLab
   </div>
 
   <ul class="ml-auto md:flex gap-6 z-30 nav-button-transition" [class.nav-button-hidden]="hideNavButtons">
     <li><a routerLink="/contact" (click)="closeMenu()"
-        class="rounded-full invisible md:visible border-2 border-[#7F00FF] text-gray-500 px-6 py-3 rounded font-bold hover:bg-[#7F00FF] hover:text-black transition">Contactez-nous</a>
+        class="rounded-full invisible md:visible border-2 border-[#7F00FF] px-6 py-3 rounded font-bold hover:bg-[#7F00FF] hover:text-black transition"
+        [ngClass]="{ 'text-white': isServicesRoute, 'text-gray-500': !isServicesRoute }">Contactez-nous</a>
     </li>
   </ul>
 
@@ -42,9 +46,9 @@
 
 
       <div class="absolute bottom-6 inset-x-0 flex justify-center gap-4 px-6">
-        <a href="#" class="border border-[#7F00FF] p-2 rounded-md hover:bg-[#7F00FF] hover:text-black transition"><i class="fab fa-instagram fa-lg"></i></a>
-        <a href="#" class="border border-[#7F00FF] p-2 rounded-md hover:bg-[#7F00FF] hover:text-black transition"><i class="fab fa-github fa-lg"></i></a>
-        <a href="#" class="border border-[#7F00FF] p-2 rounded-md hover:bg-[#7F00FF] hover:text-black transition"><i class="fab fa-linkedin fa-lg"></i></a>
+        <a href="https://www.instagram.com/cocolabagence/" class="border border-[#7F00FF] p-2 rounded-md hover:bg-[#7F00FF] hover:text-black transition"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="https://github.com/matheorose/CocoLab" class="border border-[#7F00FF] p-2 rounded-md hover:bg-[#7F00FF] hover:text-black transition"><i class="fab fa-github fa-lg"></i></a>
+        <a href="https://www.linkedin.com/in/coco-lab-7aa55b39a/" class="border border-[#7F00FF] p-2 rounded-md hover:bg-[#7F00FF] hover:text-black transition"><i class="fab fa-linkedin fa-lg"></i></a>
       </div>
     </div>
   </div>
