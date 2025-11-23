@@ -35,3 +35,15 @@
   min-height: 100%;
 }
 */
+
+@media (max-width: 768px) {
+  .services-section::before {
+    background-size: cover;
+    background-position: center top;
+    transform: none;
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 0;
+  }
+}
