@@ -1,11 +1,13 @@
 .services-section {
   position: relative;
   overflow: hidden;
+  /* Utilisation de min-height pour s'assurer qu'elle est au moins pleine hauteur */
   min-height: 100vh;
   background-image: url('../../../assets/fond.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .services-section::before {
@@ -21,3 +23,9 @@
   position: relative;
   z-index: 1;
 }
+
+/* Vous pouvez supprimer la règle suivante si elle existait et qui pourrait causer des conflits:
+.services-section > div {
+  min-height: 100%;
+}
+*/
