@@ -26,7 +26,10 @@
 
 @media (max-width: 768px) {
   .services-section {
-    background-position: right center;
+    background-image: url('../../../assets/fond-tel.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
   }
 }
 
