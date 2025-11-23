@@ -1,49 +1,65 @@
+/* -------------------------------------- */
+/* services.component.css - CORRECTION */
+/* -------------------------------------- */
+
 .services-section {
   position: relative;
   overflow: hidden;
-  /* Utilisation de min-height pour s'assurer qu'elle est au moins pleine hauteur */
   min-height: 100vh;
-  background-image: url('../../../assets/fond.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  /* L'attachement fixe doit rester ici */
   background-attachment: fixed;
 }
 
+/* Pseudo-élément (::before) : L'arrière-plan par défaut (Desktop) */
 .services-section::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.50);
   z-index: 0;
   pointer-events: none;
+
+  /* Image de fond pour le DESKTOP/GRANDS ÉCRANS */
+  background-image: url('../../../assets/fond.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* ⚠️ Propriété clé : L'image de fond de ::before doit AUSSI être fixe */
+  background-attachment: fixed;
+
+  /* Votre calque d'opacité */
+  background-color: rgba(0, 0, 0, 0.50);
+  background-blend-mode: multiply;
 }
 
-.services-section > * {
-  position: relative;
-  z-index: 1;
-}
-
-@media (max-width: 768px) {
-  .services-section {
-    background-position: right center;
-  }
-}
-
-/* Vous pouvez supprimer la règle suivante si elle existait et qui pourrait causer des conflits:
-.services-section > div {
-  min-height: 100%;
-}
-*/
+/* -------------------------------------- */
+/* 🆕 Media Query : Ajustement pour Mobile */
+/* -------------------------------------- */
 
 @media (max-width: 768px) {
   .services-section::before {
+    /* Maintien de l'image originale */
+    background-image: url('../../../assets/fond.png');
+
+    /* 1. Taille : Utiliser 'cover' pour remplir l'espace.
+       2. Position : Aligner sur le centre horizontalement, et le haut verticalement.
+          Ceci minimise le zoom sur les téléphones en mode portrait. */
     background-size: cover;
     background-position: center top;
+
+    /* 3. L'attachement fixe est maintenu */
+    background-attachment: fixed;
+
+    /* Assurez-vous qu'aucune rotation ou décalage n'est présent */
     transform: none;
     width: auto;
     height: auto;
     top: 0;
     left: 0;
   }
+}
+
+.services-section > * {
+  position: relative;
+  z-index: 1;
 }
