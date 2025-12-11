@@ -54,5 +54,5 @@ app.post('/send-email', async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Le serveur backend tourne sur http://localhost:${port}`);
+  console.log(`Le serveur backend tourne sur le port ${port}`);
 });
